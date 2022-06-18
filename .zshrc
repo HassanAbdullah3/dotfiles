@@ -151,6 +151,7 @@ alias ls='exa --icons -a --group-directories-first'
 alias e='exit'
 alias s='source'
 alias z='zsh'
+alias ch='chmod +x'
 alias grep='rg'
 alias c='clear'
 alias nv='nvim'
@@ -159,6 +160,9 @@ alias fm='fm6000'
 alias sn='sudo nvim'
 alias nz='nvim ~/.zshrc'
 alias sz='source ~/.zshrc'
+alias ns='nvim ~/.config/sxhkd/sxhkdrc'
+alias nb='nvim ~/.config/bspwm/bspwmrc'
+alias cb='cd ~/.config/bspwmbar/'
 alias pf='poweroff'
 alias rb='reboot'
 alias run='setsid -f'
@@ -166,12 +170,13 @@ alias uv='sudo virsh net-start default'
 alias un='sudo systemctl restart NetworkManager.service'
 
 # package management
+alias pcs='pacman -Ss' 
 alias prn='paru -S'
 alias prm='sudo paru -R' 
 alias prs='paru -Ss' 
 alias prp='paru && paru -Sua'
 
-alias unlock='sudo rm /var/lib/pacman/db.lck'
+alias ul='sudo rm /var/lib/pacman/db.lck'
 alias cleanup='sudo paru -Rns $(paru -Qtdq)'
 
 alias fltn='sudo flatpak install'
@@ -186,18 +191,18 @@ alias rel="xrdb merge ~/.Xresources-onedark && kill -USR1 $(pidof st)"
 
 # dwm shortcuts
 alias nc='nvim config.def.h'
+alias np='nvim patches.def.h'
 alias rc='rm config.h'
-alias cs='cd ~/.config/chadwm/scripts/'
-alias dc='cd ~/.config/chadwm/chadwm/'
+alias cs='cd ~/.local/dwm'
+alias dc='cd ~/.config/dwm'
+alias bn='cd ~/.local/bin'
 alias ct='cd ~/temp/'
 alias cc='cd ~/.config/'
 alias mk='sudo make install'
 
 # ytp-dl
 alias yta="yt-dlp --extract-audio --audio-format mp3 "
-alias ytv='yt-dlp -f "[height<=?720][tbr>500]" --merge-output-format mp4'
-alias ytv-bestu="yt-dlp -f '[height<=?720][tbr>500][ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4 "
-alias ytv-best="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4 "
+alias ytv="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4 "
 
 
 # cd'ing
@@ -207,7 +212,7 @@ alias ts='cd ~/documents/development/typescript'
 alias py='cd ~/documents/development/python'
 alias cg='cd ~/documents/development/go'
 alias lu='cd ~/documents/development/lua'
-alias clang='cd ~/documents/development/c'
+alias zg='cd ~/documents/development/zig'
 
 # git
 alias token='cat "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"'

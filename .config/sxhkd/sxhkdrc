@@ -50,11 +50,11 @@ super + Escape
 #
 
 # quit/restart bspwm
-super + alt + {q,r}
+super + shift + {q,r}
 	bspc {quit,wm -r}
 
 # close and kill
-super + w
+super + q
 	bspc node -c
 
 # alternate between the tiled and monocle layout
@@ -150,3 +150,35 @@ super + alt + shift + {h,j,k,l}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+# shutdown
+super + alt + q 
+        poweroff
+
+# reboot
+super + alt + r
+        reboot
+
+super + e
+        ~/.config/bspwm/hide
+super + x
+        i3lock -i ~/pictures/wallpapers/mountain.jpg
+
+# reset bar
+super + shift + b
+        killall bspwmbar && bspwmbar
+
+# lockscreen
+alt + shift + x
+        betterlockscreen -l dim
+
+# brightness
+XF86MonBrightness{Up,Down}
+        xbacklight {-inc,-dec} 5
+
+# Audio
+XF86Audio{Raise,Lower}Volume
+        pamixer {-i,-d} 5
+
+XF86AudioMute
+        pamixer -t

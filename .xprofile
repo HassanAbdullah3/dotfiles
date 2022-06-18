@@ -1,5 +1,5 @@
 # key bindings
-pgrep -x sxhkd > /dev/null || sxhkd &
+# pgrep -x sxhkd > /dev/null || sxhkd &
 
 # Speedy keys
 xset r rate 210 40

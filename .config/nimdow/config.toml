@@ -1,0 +1,275 @@
+# App Rules
+# Example:
+# [[appRule]]
+# class = "st"
+# instance = "st"
+# title = "st"
+# monitor = 1
+# tags = [ 1, 4, 7 ]
+# state = "floating" # normal, floating, and fullscreen are all valid.
+
+# Start external programs
+[[startProcess]]
+command = "pkill nimdow"
+keys = [ "q" ]
+modifiers = [ "super", "shift" ]
+
+[[startProcess]]
+command = "xbacklight -inc 5"
+keys = [ "i" ]
+modifiers = [ "super" , "alt" ]
+
+[[startProcess]]
+command = "xbacklight -dec 5"
+keys = [ "d" ]
+modifiers = [ "super" , "alt" ]
+
+[[startProcess]]
+command = "pamixer -i 5"
+keys = [ "a" ]
+modifiers = [ "super" , "alt" ]
+
+[[startProcess]]
+command = "pamixer -d 5"
+keys = [ "u" ]
+modifiers = [ "super" , "alt" ]
+
+[[startProcess]]
+command = "pamixer -t"
+keys = [ "m" ]
+modifiers = [ "super" , "alt" ]
+
+[[startProcess]]
+command = "maim --select ~/pictures/screenshots/$(date +%s).png"
+keys = [ "u" ]
+modifiers = [ "super" ]
+
+[[startProcess]]
+command = "maim ~/pictures/screenshots/$(date +%s).png"
+keys = [ "u" ]
+modifiers = [ "super" , "shift" ]
+
+[[startProcess]]
+command = "$BROWSER"
+keys = [ "w" ]
+modifiers = [ "super" ]
+
+[[startProcess]]
+command = "nemo"
+keys = [ "n" ]
+modifiers = [ "super" ]
+
+[[startProcess]]
+command = "pix"
+keys = [ "p" ]
+modifiers = [ "super" ]
+
+[[startProcess]]
+command = "virt-manager"
+keys = [ "v" ]
+modifiers = [ "super" ]
+
+[[startProcess]]
+command = "godot"
+keys = [ "g" ]
+modifiers = [ "super" ]
+
+[[startProcess]]
+command = "aseprite"
+keys = [ "a" ]
+modifiers = [ "super" ]
+
+[[startProcess]]
+command = "slock"
+keys = [ "x" ]
+modifiers = [ "super" ]
+
+[[startProcess]]
+command = "dmenu_run"
+keys = [ "r" ]
+modifiers = [ "super" ]
+
+[[startProcess]]
+command = "rofi -show drun"
+keys = [ "c" ]
+modifiers = [ "super" ]
+
+[[startProcess]]
+command = "st"
+keys = [ "Return" ]
+modifiers = [ "super" ]
+
+# Example: Start process when region is clicked, see github wiki for what constitutes a region
+# [[startProcess]]
+# command = "notify-send \"Id: %1, rx: %2, cx: %4, w: %6\""
+# clickRegion = 0
+
+[autostart]
+exec = [
+  "feh --bg-fill /usr/share/backgrounds/archlinux/archwave.png"
+  "~/.local/share/dwm/./bar.sh",
+  #"xsetroot -cursor_name left_ptr",
+  #"firefox",
+  #"st",
+]
+
+[settings]
+  # Window settings
+  borderWidth = 1
+  borderColorUnfocused = "#282a36"
+  borderColorFocused = "#50fa7b"
+  borderColorUrgent = "#ff5555"
+  # Bar settings
+  barHeight = 20
+  windowTitlePosition = "center"
+  barBackgroundColor = "#282a36"
+  barForegroundColor = "#f8f8f2"
+  barSelectionColor = "#50fa7b"
+  barUrgentColor = "#ff5555"
+  barFonts = [
+    "monospace:size=10:antialias=true",
+    "Material Design Icons Desktop:size=10:antialias=true"
+  ]
+	# Layout settings
+  gapSize = 0
+	resizeStep = 10
+  # General settings
+  loggingEnabled = false
+  reverseTagScrolling = false
+
+# Window manager controls
+[controls]
+  [controls.reloadConfig]
+  keys = [ "r" ]
+  modifiers = [ "super", "shift" ]
+
+  [controls.focusPrevious]
+  keys = [ "k" ]
+  modifiers = [ "super" ]
+
+  [controls.focusNext]
+  keys = [ "j" ]
+  modifiers = [ "super" ]
+
+  [controls.moveWindowPrevious]
+  keys = [ "k" ]
+  modifiers = [ "super", "shift" ]
+
+  [controls.moveWindowNext]
+  keys = [ "j" ]
+  modifiers = [ "super", "shift" ]
+
+  [controls.toggleFullscreen]
+  keys = [ "f" ]
+  modifiers = [ "super" ]
+
+  [controls.destroySelectedWindow]
+  keys = [ "q" ]
+  modifiers = [ "super" ]
+
+  [controls.goToPreviousTag]
+  keys = [ "w" ]
+  modifiers = [ "super" ]
+
+  [controls.moveWindowToPreviousTag]
+  keys = [ "w" ]
+  modifiers = [ "super", "shift" ]
+
+  [controls.focusPreviousMonitor]
+  keys = [ "comma" ]
+  modifiers = [ "super" ]
+
+  [controls.focusNextMonitor]
+  keys = [ "period" ]
+  modifiers = [ "super" ]
+
+  [controls.moveWindowToPreviousMonitor]
+  keys = [ "comma" ]
+  modifiers = [ "super", "shift" ]
+
+  [controls.moveWindowToNextMonitor]
+  keys = [ "period" ]
+  modifiers = [ "super", "shift" ]
+
+  [controls.increaseMasterCount]
+  keys = [ "z" ]
+  modifiers = [ "super" ]
+
+  [controls.decreaseMasterCount]
+  keys = [ "x" ]
+  modifiers = [ "super" ]
+
+  [controls.toggleFloating]
+  keys = [ "space" ]
+  modifiers = [ "super" ]
+
+  [controls.jumpToUrgentWindow]
+  keys = [ "u" ]
+  modifiers = [ "super" ]
+
+  [controls.goToTag]
+  keys = [ "1", "2", "3", "4", "5", "6", "7", "8", "9" ]
+  modifiers = [ "super" ]
+
+  [controls.goToLeftTag]
+  keys = [ "Left" ]
+  modifiers = [ "super" ]
+
+  [controls.goToRightTag]
+  keys = [ "Right" ]
+  modifiers = [ "super" ]
+
+  [controls.moveWindowToTag]
+  keys = [ "1", "2", "3", "4", "5", "6", "7", "8", "9" ]
+  modifiers = [ "super", "shift" ]
+
+  [controls.moveWindowToLeftTag]
+  keys = [ "Left" ]
+  modifiers = [ "super", "shift" ]
+
+  [controls.moveWindowToRightTag]
+  keys = [ "Right" ]
+  modifiers = [ "super", "shift" ]
+
+  [controls.toggleTagView]
+  keys = [ "1", "2", "3", "4", "5", "6", "7", "8", "9" ]
+  modifiers = [ "super", "control" ]
+
+  [controls.toggleWindowTag]
+  keys = [ "1", "2", "3", "4", "5", "6", "7", "8", "9" ]
+  modifiers = [ "super", "shift", "control" ]
+
+	[controls.increaseMasterWidth]
+	keys = [ "l" ]
+	modifiers = [ "super" ]
+
+	[controls.decreaseMasterWidth]
+	keys = [ "h" ]
+	modifiers = [ "super" ]
+
+  [controls.moveWindowToScratchpad]
+  keys = [ "s" ]
+  modifiers = [ "super" ]
+
+  [controls.popScratchpad]
+  keys = [ "s" ]
+  modifiers = [ "super" , "shift" ]
+
+# Example monitor settings:
+# [monitors]
+  # [monitors.default.tags]
+  # 1.displayString = "one"
+  # 2.displayString = "foobar"
+  # Set the number of master windows for ALL monitors.
+  # all.numMasterWindows = 2
+
+  # [monitors.1.tags]
+  # 2.displayString = "two"
+  # Set the number of master windows per-monitor.
+  # all.numMasterWindows = 3
+  # Set the number of master windows per-tag.
+  # 2.numMasterWindows = 1
+
+  # [monitors.2.tags]
+  # 2.displayString = "too"
+

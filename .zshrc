@@ -217,7 +217,7 @@ alias lu='cd ~/documents/development/lua'
 alias zg='cd ~/documents/development/zig'
 
 # git
-alias token='cat "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"'
+alias token=''
 alias cl='git clone'
 alias pull='git pull'
 alias checkout='git checkout'

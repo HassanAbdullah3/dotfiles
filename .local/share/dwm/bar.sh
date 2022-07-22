@@ -14,8 +14,7 @@ pkg_updates() {
   # updates=$(checkupdates | wc -l)   # arch , needs pacman contrib
   # updates=$(aptitude search '~U' | wc -l)  # apt (ubuntu,debian etc)
   printf "  "
-  #printf "$(checkupdates | wc -l)"
-  printf "$(pacman -Qu | wc -l)"
+  printf "$(checkupdates | wc -l)"
 }
 
 brightness() {

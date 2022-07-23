@@ -1,0 +1,33 @@
+# key bindings
+# pgrep -x sxhkd > /dev/null || sxhkd &
+
+# Speedy keys
+xset r rate 210 40
+
+# Environment variables set everywhere
+export EDITOR="nvim"
+export TERMINAL="st"
+export BROWSER="firefox"
+
+# XDG Paths
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_CACHE_HOME=$HOME/.cache
+export XDG_DATA_HOME=$HOME/.local/share
+
+
+# remap caps to escape
+setxkbmap -option caps:escape
+# swap escape and caps
+setxkbmap -option caps:swapescape
+
+# override style for QT applications
+export QT_STYLE_OVERRIDE=gtk
+
+# switching keyboard layout
+setxkbmap -layout us,ar -option grp:alt_shift_toggle
+
+# lanuch polkit auth agent
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+
+# Xresources
+xrdb merge ~/.Xresources-onedark

@@ -1,0 +1,7 @@
+#!/bin/zsh
+
+
+mv $ZDOTDIR/.zsh_history $ZDOTDIR/.zsh_history_bad
+strings $ZDOTDIR/.zsh_history_bad > $ZDOTDIR/.zsh_history
+fc -R $ZDOTDIR/.zsh_history
+rm $ZDOTDIR/.zsh_history_bad

@@ -1,0 +1,88 @@
+#!/bin/sh
+
+# shortcuts
+alias ls='exa --icons -a --group-directories-first'
+alias e='exit'
+alias s='source'
+alias z='zsh'
+alias r='ranger'
+alias ch='chmod +x'
+alias grep='rg'
+alias c='clear'
+alias nv='nvim'
+alias lv='lvim'
+alias hx='helix'
+alias sn='sudo nvim'
+alias nz='nvim $ZDOTDIR/.zshrc'
+alias sz='exec zsh'
+alias cz='cd $ZDOTDIR'
+alias na='nvim $ZDOTDIR/.zsh-aliases'
+alias sa='source $ZDOTDIR/.zsh-aliases'
+alias nf='nvim $ZDOTDIR/.zsh-functions'
+alias sf='source $ZDOTDIR/.zsh-functions'
+alias ns='nvim ~/.config/sxhkd/sxhkdrc'
+alias nb='nvim ~/.config/bspwm/bspwmrc'
+alias nn='nvim ~/.config/nimdow/config.toml'
+alias cb='cd ~/.config/bspwmbar/'
+alias bu='brightnessctl s 233'
+alias bd='brightnessctl s 47'
+alias pf='poweroff'
+alias rb='reboot'
+alias run='setsid -f'
+alias uv='sudo virsh net-start default'
+alias un='sudo systemctl restart NetworkManager.service'
+
+# package management
+alias pcs='pacman -Ss' 
+alias prn='paru -S'
+alias prm='sudo paru -R' 
+alias prs='paru -Ss' 
+alias prp='paru && paru -Sua'
+
+alias ul='sudo rm /var/lib/pacman/db.lck'
+alias cleanup='sudo paru -Rns $(paru -Qtdq)'
+
+alias fltn='sudo flatpak install'
+alias fltr='sudo flatpak remove'
+alias flts='flatpak search'
+alias fltp='sudo flatpak update'
+
+# Xresources
+alias use="xrdb merge"
+alias load="kill -USR1 $(pidof st)"
+alias rel="xrdb merge ~/.Xresources-onedark && kill -USR1 $(pidof st)"
+
+# dwm shortcuts
+alias nc='nvim config.def.h'
+alias np='nvim patches.def.h'
+alias rc='rm config.h'
+alias cs='cd ~/.local/share/dwm'
+alias dc='cd ~/.config/dwm'
+alias bn='cd ~/.local/bin'
+alias ct='cd ~/temp/'
+alias cc='cd ~/.config/'
+alias mk='sudo make install'
+
+# ytp-dl
+alias yta="youtube-dl --extract-audio --audio-format mp3 "
+alias ytv="youtube-dl -f 136+bestaudio "
+
+
+# cd'ing
+alias gd='cd ~/documents/godot'
+alias rs='cd ~/documents/development/rust'
+alias ts='cd ~/documents/development/typescript'
+alias py='cd ~/documents/development/python'
+alias cg='cd ~/documents/development/go'
+alias lu='cd ~/documents/development/lua'
+alias zg='cd ~/documents/development/zig'
+alias cdc='cd ~/documents/development/c'
+
+# git
+alias token='echo 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 HassanAbdullah3'
+alias cl='git clone'
+alias pull='git pull'
+alias checkout='git checkout'
+alias commit='git commit'
+alias push='git push origin main'
+alias add='git add . && commit -m'
